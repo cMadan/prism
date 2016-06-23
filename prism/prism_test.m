@@ -14,6 +14,9 @@ function fit = prism_test(te_X,params)
 %               .pred  = predicted y (i.e., y_hat)
 %
 % 20160621 CRM
+%
+% Written by Christopher R Madan
+% https://github.com/cMadan/prism
 
 % patch for convience/error-handling
 if isfield(params,'stats')
