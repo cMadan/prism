@@ -15,6 +15,9 @@ function perf = prism_eval(y,pred)
 %              .rmsd = root mean squared deviation
 %
 % 20160619 CRM
+%
+% Written by Christopher R Madan
+% https://github.com/cMadan/prism
 
 % patch for convience/error-handling
 if isfield(pred,'pred')
