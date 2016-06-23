@@ -210,10 +210,10 @@ To provide an example of Prism's implentation, see the 'demo' folder. `demo.mat`
 
 As a benchmark, `demo.m` was run using several configurations: (1) RVR (default) or LASSO for the multiple regression; (2) with or without PCA; and (3) with or without spline regression--yielding eight comparison analyses. A 'constant' model, where all ages are simply predicted to be the mean age (within the testing dataset) was also included as an upper-limit of performance (i.e., a good model should do no worse than this).
 
-Here I ran each analyses 100 times and report several measures of performance: r<sup>2</sup> and median absolute error (MdAE) in the testing data, average time to compute (all run on the same machine), and stability of error performance (SD of MdAE across the 100 calculations). All analyses were run with least-squares splines (`opt.spline.p=0`).
+Here I ran each analyses 100 times and report several measures of performance: R<sup>2</sup> and median absolute error (MdAE) in the testing data, average time to compute (all run on the same machine), and stability of error performance (SD of MdAE across the 100 calculations). All analyses were run with least-squares splines (`opt.spline.p=0`).
 
 
-Model variant              |  r^2  |  MdAE  | Time [s] | SD(MdAE)
+Model variant              |  R<sup>2</sup>  |  MdAE  | Time [s] | SD(MdAE)
 -------------------------- | ----: | -----: | -------: | -------:
 Spline+PCA+RVR             |  .777 |  7.74  |    0.55  |   0    
 (Prism default)            |       |        |          |         
