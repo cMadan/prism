@@ -47,6 +47,9 @@ function mdl = prism_train(tr_X,tr_y,opt)
 % For RVR, also requires SparseBayes V2 (http://www.relevancevector.com).
 %
 % 20160621 CRM
+%
+% Written by Christopher R Madan
+% https://github.com/cMadan/prism
 
 %% define default options
 %defaultopt.spline.p       = defer to csaps
