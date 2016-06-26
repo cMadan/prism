@@ -36,7 +36,7 @@ opt.spline.p        = 0;
 
 % fit prism to training data
 mdl     = prism_train(tr_X,tr_y,opt);
-% get performance metrics (r^2, RMSD, MAE)
+% get performance metrics
 % is an estimate of best-case of sorts:
 %       poor performance here is a bad sign
 %       but, good performance could represent over-fitting
