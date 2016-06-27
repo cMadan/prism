@@ -22,7 +22,7 @@ See `demo.m` for an outline of the implementation.
 
 ```matlab
 % Demo of Prism functionality
-% 20160621 CRM
+% 20160627 CRM
 
 %% init
 % import prism
@@ -79,6 +79,12 @@ te_perf = prism_eval(te_y,fit)
 
 % fit performance (te_perf) should be approx:
 %       r2 = .78; MdAE = 7.75
+
+% visualize predictions in test data
+% Fig 1. Data vs. Prediction
+figure; scatter(te_y,fit.pred); xlabel('Data'); ylabel('Prediction');
+% Fig 2. Data vs. Prediction Error
+figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');
 
 ```
 
@@ -229,5 +235,5 @@ LASSO                      |  .777 |  8.53  |  231.43  |   0.04
 Constant [y_hat = Mean(y)] |  .000 | 22.28  |          |
 
 
-The above benchmarks suggest that, given the `demo.mat` training and test data, spline-based regression lead to substantially better predictions, particularly in the case of the median absolute error (MdAE). When splines are not used, LASSO performs better than RVR, but comes with a much larger computational cost. This computational cost can be largely mitigated through the use of PCA for dimensionality reduction, but even otherwise, PCA is associated with a marked improvement in prediction performance. We also see that given this dataset, regression models using LASSO (as opposed to RVR), are nondeterministic (i.e., there is variability in the performance of the model across each time it is run ), as SD(MdAE)>0.
+The above benchmarks suggest that, given the `demo.mat` training and test data, spline-based regression leads to substantially better predictions, particularly in the case of the median absolute error (MdAE). When splines are not used, LASSO performs better than RVR, but comes with a much larger computational cost. This computational cost can be largely mitigated through the use of PCA for dimensionality reduction, but even otherwise, PCA is associated with a marked improvement in prediction performance. We also see that given this dataset, regression models using LASSO (as opposed to RVR), are nondeterministic (i.e., there is variability in the performance of the model across each time it is run ), as SD(MdAE)>0.
 

@@ -1,5 +1,5 @@
 % Demo of Prism functionality
-% 20160621 CRM
+% 20160627 CRM
 
 %% init
 % import prism
@@ -57,3 +57,8 @@ te_perf = prism_eval(te_y,fit)
 % fit performance (te_perf) should be approx:
 %       r2 = .78; MdAE = 7.75
 
+% visualize predictions in test data
+% Fig 1. Data vs. Prediction
+figure; scatter(te_y,fit.pred); xlabel('Data'); ylabel('Prediction');
+% Fig 2. Data vs. Prediction Error
+figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');
