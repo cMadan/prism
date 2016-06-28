@@ -6,7 +6,7 @@ Prism uses a combination of statistical methods to conduct spline-based multiple
 
 Figure 1: Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
 
--![Illustration of Prism regression procedure.](docs/fig1_prism.png)
+![Illustration of Prism regression procedure.](docs/fig1_prism.png)
 
 Prism has been tested in MATLAB 2015b and requires three first-party toolboxes: (1) Curve Fitting Toolbox; (2) Statistics and Machine Learning Toolbox; (3) Signal Processing Toolbox. Relevance Vector Regression (RVR) requires the SparseBayes V2 toolbox, which can be obtained from http://www.relevancevector.com.
 
@@ -90,7 +90,7 @@ figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');
 
 Figure 2: Output scatter plots for code in `demo.m`.
 
--![Example output.](docs/fig2_output.png)
+![Example output.](docs/fig2_output.png)
 
 
 ```
