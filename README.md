@@ -84,7 +84,7 @@ te_perf = prism_eval(te_y,fit)
 % Fig A. Data vs. Prediction
 figure; scatter(te_y,fit.pred); xlabel('Data'); ylabel('Prediction');
 % Fig B. Data vs. Prediction Error
-figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');
+figure; scatter(te_y,fit.pred-te_y); xlabel('Data'); ylabel('Prediction Error');
 
 ```
 
