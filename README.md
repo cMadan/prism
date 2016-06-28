@@ -4,7 +4,7 @@ Prism: Multiple spline regression with regularization, dimensionality reduction,
 # Summary
 Prism uses a combination of statistical methods to conduct spline-based multiple regression. Prism conducts this regression using regularization, dimensionality reduction, and feature selection, through a combination of smoothing spline regression, PCA, and RVR/LASSO. 
 
-Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
+Figure 1: Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
 
 -![Illustration of Prism regression procedure.](docs/fig1_prism.png)
 
@@ -81,12 +81,17 @@ te_perf = prism_eval(te_y,fit)
 %       r2 = .78; MdAE = 7.75
 
 % visualize predictions in test data
-% Fig 1. Data vs. Prediction
+% Fig A. Data vs. Prediction
 figure; scatter(te_y,fit.pred); xlabel('Data'); ylabel('Prediction');
-% Fig 2. Data vs. Prediction Error
+% Fig B. Data vs. Prediction Error
 figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');
 
 ```
+
+Figure 2: Output scatter plots for code in `demo.m`.
+
+-![Example output.](docs/fig2_output.png)
+
 
 ```
 function mdl = prism_train(tr_X,tr_y,opt)
@@ -210,7 +215,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Example implementation
 
-To provide an example of Prism's implentation, see the 'demo' folder. `demo.mat` was generated using brain morphology data, where each column corresponds to a brain morphology measure. The test and training data are derived from independent MR sites, and the dependent variable is age. The data is from an unpublished study and the pre-processing pipeline is not finalized (e.g., correcting for site effects), so further information of the dataset is not provided at this time.
+To provide an example of Prism's implementation, see the 'demo' folder. `demo.mat` was generated using brain morphology data, where each column corresponds to a brain morphology measure. The test and training data are derived from independent MR sites, and the dependent variable is age. The data is from an unpublished study and the pre-processing pipeline is not finalized (e.g., correcting for site effects), so further information of the dataset is not provided at this time.
 
 # Benchmark
 

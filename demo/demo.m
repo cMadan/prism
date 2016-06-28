@@ -58,7 +58,7 @@ te_perf = prism_eval(te_y,fit)
 %       r2 = .78; MdAE = 7.75
 
 % visualize predictions in test data
-% Fig 1. Data vs. Prediction
+% Fig A. Data vs. Prediction
 figure; scatter(te_y,fit.pred); xlabel('Data'); ylabel('Prediction');
-% Fig 2. Data vs. Prediction Error
+% Fig B. Data vs. Prediction Error
 figure; scatter(te_y,te_y-fit.pred); xlabel('Data'); ylabel('Prediction Error');

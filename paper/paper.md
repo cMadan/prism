@@ -23,8 +23,19 @@ Prism uses a combination of statistical methods to conduct spline-based multiple
 Prism has been tested in MATLAB 2015b and requires three first-party toolboxes: (1) Curve Fitting Toolbox; (2) Statistics and Machine Learning Toolbox; (3) Signal Processing Toolbox. Relevance vector regression requires the SparseBayes V2 toolbox, which can be obtained from http://www.relevancevector.com.
 
 -![Illustration of Prism regression procedure.](fig1_prism.png)
-Figure: Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
+Figure 1: Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
 
 Prism was implemented for conducting multiple regression investigating age-related differences in brain morphology. While linear and quadratic regression are often used (e.g., [@SoweEtal2003; @HogsEtal2013; @MadaKens2016]), it has been shown that non-linear (spline) regression is more appropriate [@FjelEtal2010; @FjelEtal2013].
+
+# Example implementation
+
+To provide an example of Prism's implementation, see the 'demo' folder. `demo.mat` was generated using brain morphology data, where each column corresponds to a brain morphology measure. The test and training data are derived from independent MR sites, and the dependent variable is age. The data is from an unpublished study and the pre-processing pipeline is not finalized (e.g., correcting for site effects), so further information of the dataset is not provided at this time.
+
+Figure 2: Output scatter plots for code in `demo.m`.
+
+-![Example output.](fig2_output.png)
+
+See README.md for further details.
+
 
 # References
