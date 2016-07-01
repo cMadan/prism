@@ -14,7 +14,7 @@ Prism has been tested in MATLAB 2015b and requires three first-party toolboxes: 
 
 Please cite this paper if you use the toolbox:
 
-Madan, C. R. (under review). Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection. 
+Madan, C. R. (2016). Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection. Journal of Open Source Software, 31. doi: 10.21105/joss.00031
 
 # Usage
 
