@@ -31,9 +31,8 @@ Prism was implemented for conducting multiple regression investigating age-relat
 
 To provide an example of Prism's implementation, see the 'demo' folder. `demo.mat` was generated using brain morphology data, where each column corresponds to a brain morphology measure. The test and training data are derived from independent MR sites, and the dependent variable is age. The data is from an unpublished study and the pre-processing pipeline is not finalized (e.g., correcting for site effects), so further information of the dataset is not provided at this time.
 
-Figure 2: Output scatter plots for code in `demo.m`.
-
 ![Example output.](fig2_output.png)
+Figure 2: Output scatter plots for code in `demo.m`.
 
 See README.md for further details.
 
