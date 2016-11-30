@@ -185,7 +185,7 @@ function perf = prism_eval(y,pred)
 ```
 
 # License
-Matlab code is made available under an BSD license (see `LICENSE`).
+Matlab code is made available under a BSD license (see `LICENSE`).
 
 ```
 Copyright (c) 2016, Christopher R. Madan.
