@@ -1,0 +1,18 @@
+# Citation details for prism toolbox
+
+## APA
+
+Madan, C. R. (2016). Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection. Journal of Open Source Software, 1, 31. doi:10.21105/joss.00031
+
+
+## BiBTeX
+
+@Article{Mada2016,
+  author    = {Christopher R Madan},
+  title     = {Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection},
+  journal   = {Journal of Open Source Software},
+  year      = {2016},
+  volume    = {1},
+  pages     = {31},
+  doi       = {10.21105/joss.00031},
+}
