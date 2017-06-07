@@ -224,20 +224,24 @@ As a benchmark, `demo.m` was run using several configurations: (1) RVR (default)
 Here I ran each analyses 100 times and report several measures of performance: R<sup>2</sup> and median absolute error (MdAE) in the testing data, average time to compute (all run on the same machine), and stability of error performance (SD of MdAE across the 100 calculations). All analyses were run with least-squares splines (`opt.spline.p=0`).
 
 
-Model variant              |  R<sup>2</sup>  |  MdAE  | Time [s] | SD(MdAE)
--------------------------- | ----: | -----: | -------: | -------:
-Spline+PCA+RVR             |  .777 |  7.74  |    0.55  |   0    
-(Prism default)            |       |        |          |         
-                           |       |        |          |
-Spline+PCA+LASSO           |  .779 |  8.06  |    3.84  |   0.17      
-Spline+RVR                 |  .758 |  8.42  |    1.26  |   0      
-Spline+LASSO               |  .776 |  8.35  |  232.84  |   0.05      
-PCA+RVR                    |  .601 | 12.31  |    0.12  |   0      
-PCA+LASSO                  |  .713 |  9.66  |    2.54  |   0.11      
-RVR                        |  .703 | 10.57  |    0.12  |   0      
-LASSO                      |  .777 |  8.53  |  231.43  |   0.04
-                           |       |        |          |
-Constant [y_hat = Mean(y)] |  .000 | 22.28  |          |
+| Model variant              |  R<sup>2</sup>  |  MdAE  | Time [s] | SD(MdAE) |
+| -------------------------- | ----: | -----: | -------: | ----------: |
+| <b>Spline+PCA+RVR</b>      |  .777 |  7.74  |    0.55  |   0         |
+| <b>(Prism default)</b>     |       |        |          |             |
+|                            |       |        |          |             |
+|                            |       |        |          |             |
+| Spline+PCA+LASSO           |  .779 |  8.06  |    3.84  |   0.17      |
+| Spline+RVR                 |  .758 |  8.42  |    1.26  |   0         |
+| Spline+LASSO               |  .776 |  8.35  |  232.84  |   0.05      |
+| PCA+RVR                    |  .601 | 12.31  |    0.12  |   0         |
+| PCA+LASSO                  |  .713 |  9.66  |    2.54  |   0.11      |
+| RVR                        |  .703 | 10.57  |    0.12  |   0         |
+| LASSO                      |  .777 |  8.53  |  231.43  |   0.04      |
+|                            |       |        |          |             |
+|                            |       |        |          |             |
+| Constant [y_hat = Mean(y)] |  .000 | 22.28  |          |             |
+
+
 
 
 The above benchmarks suggest that, given the `demo.mat` training and test data, spline-based regression leads to substantially better predictions, particularly in the case of the median absolute error (MdAE). When splines are not used, LASSO performs better than RVR, but comes with a much larger computational cost. This computational cost can be largely mitigated through the use of PCA for dimensionality reduction, but even otherwise, PCA is associated with a marked improvement in prediction performance. We also see that given this dataset, regression models using LASSO (as opposed to RVR), are nondeterministic (i.e., there is variability in the performance of the model across each time it is run ), as SD(MdAE)>0.
