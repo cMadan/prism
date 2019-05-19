@@ -1,7 +1,8 @@
+[![DOI](http://joss.theoj.org/papers/10.21105/joss.00031/status.svg)](https://doi.org/10.21105/joss.00031)
+
 Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection
 ====
 
-# Summary
 Prism uses a combination of statistical methods to conduct spline-based multiple regression. Prism conducts this regression using regularization, dimensionality reduction, and feature selection, through a combination of smoothing spline regression, PCA, and RVR/LASSO. 
 
 Figure 1: Illustration of Prism regression procedure, first conducting spline regression for each predictor, followed by dimensionality reduction and feature selection (panel A). The logo for Prism is shown in panel B.
@@ -10,13 +11,13 @@ Figure 1: Illustration of Prism regression procedure, first conducting spline re
 
 Prism has been tested in MATLAB 2015b and requires three first-party toolboxes: (1) Curve Fitting Toolbox; (2) Statistics and Machine Learning Toolbox; (3) Signal Processing Toolbox. Relevance Vector Regression (RVR) requires the SparseBayes V2 toolbox, which can be obtained from http://www.relevancevector.com.
 
-# Citing the toolbox
+### Citing the toolbox
 
 Please cite this paper if you use the toolbox:
 
 Madan, C. R. (2016). Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection. *Journal of Open Source Software, 1*, 31. doi:10.21105/joss.00031
 
-# Usage
+### Usage
 
 See `demo.m` for an outline of the implementation.
 
@@ -184,7 +185,7 @@ function perf = prism_eval(y,pred)
 % 20160619 CRM
 ```
 
-# License
+### License
 Matlab code is made available under a BSD license (see `LICENSE`).
 
 ```
@@ -213,11 +214,11 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-# Example implementation
+### Example implementation
 
 To provide an example of Prism's implementation, see the 'demo' folder. `demo.mat` was generated using brain morphology data, where each column corresponds to a brain morphology measure. The test and training data are derived from independent MR sites, and the dependent variable is age. The data is from an unpublished study and the pre-processing pipeline is not finalized (e.g., correcting for site effects), so further information of the dataset is not provided at this time.
 
-# Benchmark
+### Benchmark
 
 As a benchmark, `demo.m` was run using several configurations: (1) RVR (default) or LASSO for the multiple regression; (2) with or without PCA; and (3) with or without spline regression--yielding eight comparison analyses. A 'constant' model, where all ages are simply predicted to be the mean age (within the testing dataset) was also included as an upper-limit of performance (i.e., a good model should do no worse than this).
 
