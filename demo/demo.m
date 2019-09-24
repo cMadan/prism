@@ -57,7 +57,7 @@ fit     = prism_test(te_X,mdl);
 te_perf = prism_eval(te_y,fit)
 
 % fit performance (te_perf) should be approx:
-%       r2 = .78; MdAE = 7.75
+%       r2 = .75; MdAE = 7.75
 
 % visualize predictions in test data
 % Fig A. Data vs. Prediction
