@@ -1,5 +1,5 @@
 % Demo of Prism functionality
-% 20160627 CRM
+% 20190924 CRM
 
 %% init
 % import prism
@@ -26,7 +26,9 @@ clear opt
 % so let's disable them with the options
 opt.disableWarnings = 1;
 
-% force least-squares spline, often reduces over-fitting
+% default is to not zscore input data
+
+% force near least-squares spline, reduces over-fitting
 opt.spline.p        = 0;
 
 % options to experiment with:

@@ -10,6 +10,8 @@ function mdl = prism_train(tr_X,tr_y,opt)
 %
 %   opt     = set options for multiple regression model
 %
+%              .doZscore        = enables/disables initial z-score of input
+%                                 (default: 0)
 %              .doSpline        = enables/disables the spline regression
 %                                 (default: 1)
 %              .doPCA           = enable/disable the PCA (default: 1)
@@ -46,7 +48,7 @@ function mdl = prism_train(tr_X,tr_y,opt)
 % Matlab toolbox dependencies: stats, curvefit, signal
 % For RVR, also requires SparseBayes V2 (http://www.relevancevector.com).
 %
-% 20160621 CRM
+% 20190924 CRM
 %
 % Written by Christopher R Madan
 % https://github.com/cMadan/prism
@@ -56,6 +58,7 @@ function mdl = prism_train(tr_X,tr_y,opt)
 defaultopt.pc.thresh        = 95;
 defaultopt.lasso.k          = 10;
 
+defaultopt.doZscore         = 0;
 defaultopt.doSpline         = 1;
 defaultopt.doPCA            = 1;
 defaultopt.doRVR            = 1;
@@ -79,6 +82,10 @@ if opt.disableWarnings == 1
     warning('off','SPLINES:SPAPS:toltoolow');
 end
 
+%% zscore
+if opt.doZscore == 1
+    tr_X = zscore(tr_X);
+end
 
 %% spline regression
 if opt.doSpline == 1
